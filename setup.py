@@ -6,7 +6,7 @@ from jupyter_packaging import get_data_files, get_version
 
 pjoin = path.join
 
-name = 'jupyterlab_nbconvert_nocode'
+name = 'handcalcs_nbconvert_exporter'
 here = path.abspath(path.dirname(__file__))
 version = get_version(pjoin(here, name, '_version.py'))
 
@@ -30,12 +30,12 @@ dev_requires = requires + [
 setup(
     name=name,
     version=version,
-    description='A simple helper library with 2 NBConvert exporters for PDF/HTML export with no code cells',
+    description='A simple helper library with two nbonvert exporters for PDF/HTML export with no code cells',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/timkpaine/jupyterlab_nbconvert_nocode',
-    author='Tim Paine',
-    author_email='t.paine154@gmail.com',
+    url='https://github.com/connorferster/handcalcs_nbconvert_exporter',
+    author='Tim Paine, Connor Ferster',
+    author_email='connorferster@gmail.com',
     license='Apache 2.0',
 
     classifiers=[
@@ -56,8 +56,8 @@ setup(
     zip_safe=False,
     entry_points={
         'nbconvert.exporters': [
-            'pdf_nocode = jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters:PDFHideCodeExporter',
-            'html_nocode = jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters:HTMLHideCodeExporter',
+            'pdf_nocode = handcalcs_nbconvert_exporter.nbconvert_functions.hideinput.exporters:PDFHideCodeExporter',
+            'html_nocode = handcalcs_nbconvert_exporter.nbconvert_functions.hideinput.exporters:HTMLHideCodeExporter',
         ],
     },
     extras_require={

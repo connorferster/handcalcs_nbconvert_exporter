@@ -1,3 +1,12 @@
 [build-system]
-# Minimum requirements for the build system to execute.
-requires = ["setuptools", "wheel", "jupyter-packaging"]
+requires = ["flit_core >=2,<4", "setuptools", "wheel", "jupyter-packaging"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "handcalcs_nbconvert_exporter"
+author = "Tim K. Paine, Connor Ferster"
+author-email = "connorferster@gmail.com"
+home-page = "http://github.com/connorferster/handcalcs_nbconvert_nocode"
+classifiers = [ "License :: OSI Approved :: Apache Software License",]
+description-file = "README.md"
+
